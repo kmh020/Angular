@@ -1,0 +1,111 @@
+@import '@angular/material/core/theming/palette';
+
+// made from http://mcg.mbitson.com/#!/
+
+$md-galup-green: (
+    50 : #f2f8ef,
+    100 : #deeed7,
+    200 : #c8e3bc,
+    300 : #b2d8a1,
+    400 : #a2cf8d,
+    500 : #91c779,
+    600 : #89c171,
+    700 : #7eba66,
+    800 : #74b35c,
+    900 : #62a649,
+    A100 : #ffffff,
+    A200 : #daffce,
+    A400 : #b4ff9b,
+    A700 : #a1ff81,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: $black-87-opacity,
+    600: $black-87-opacity,
+    700: $black-87-opacity,
+    800: white,
+    900: white,
+    A100: $black-87-opacity,
+    A200: $black-87-opacity,
+    A400: $black-87-opacity,
+    A700: $black-87-opacity,
+  )
+);
+
+$md-galup-blue: (
+    50 : #e8f2f6,
+    100 : #c5e0e9,
+    200 : #9fcbda,
+    300 : #79b6cb,
+    400 : #5ca6c0,
+    500 : #3f96b5,
+    600 : #398eae,
+    700 : #3183a5,
+    800 : #29799d,
+    900 : #1b688d,
+    A100 : #c6ebff,
+    A200 : #93d9ff,
+    A400 : #60c7ff,
+    A700 : #47beff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+// Background palette for light themes.
+$md-galup-theme-background: (
+  status-bar: map_get($md-grey, 300),
+  app-bar:    map_get($md-grey, 100),
+  background: map_get($md-grey, 50),
+  hover:      rgba(black, 0.04), 
+  card:       white,
+  dialog:     white,
+  disabled-button:   rgba(black, 0.12)
+);
+
+// Foreground palette for light themes.
+$md-galup-theme-foreground: (
+  base:            black,
+  divider:         rgba(black, 0.12),
+  dividers:        rgba(black, 0.12),
+  disabled:        rgba(black, 0.38),
+  disabled-button: rgba(black, 0.38),
+  disabled-text:   rgba(black, 0.38),
+  hint-text:       rgba(black, 0.38),
+  secondary-text:  rgba(black, 0.54),
+  icon:            rgba(black, 0.54),
+  icons:           rgba(black, 0.54),
+  text:            rgba(black, 0.87)
+);
+
+
+// Creates a container object for a light theme to be given to individual component theme mixins.
+@function md-galup-theme($primary, $accent, $warn: md-palette($md-red)) {
+  @return (
+    primary: $primary,
+    accent: $accent,
+    warn: $warn,
+    is-dark: false,
+    foreground: $md-galup-theme-foreground,
+    background: $md-galup-theme-background,
+  );
+}
+
+
+

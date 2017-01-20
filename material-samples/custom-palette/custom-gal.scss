@@ -1,0 +1,13 @@
+
+@import '@angular/material/core/theming/all-theme';
+
+@include md-core();
+
+$galup-app-warn:    md-palette($md-red);
+@import 'theme';
+$galup-app-primary: md-palette($md-galup-green);
+$galup-app-accent:  md-palette($md-galup-blue);
+
+$galup-app-theme: md-galup-theme($galup-app-primary, $galup-app-accent, $galup-app-warn);
+
+@include angular-material-theme($galup-app-theme);
